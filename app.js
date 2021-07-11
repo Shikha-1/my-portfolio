@@ -66,10 +66,9 @@ async function sendMail(req) {
 }
 
 app.post("/contact", (req, res) => {
-  sendMail(req, res)
+  sendMail(req)
     .then(async (result) => {
-      const response = await result.response;
-      console.log("Result : ", response);
+      console.log("success ", result);
       res.send("success");
     })
     .catch((error) => {
