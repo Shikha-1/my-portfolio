@@ -1,0 +1,21 @@
+{
+  "name": "shikha_portfolio",
+  "version": "1.0.0",
+  "description": "SHIKHA'S PORTFOLIO",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
+  "author": "SHIKHA",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "googleapis": "^81.0.0",
+    "hbs": "^4.1.2",
+    "nodemailer": "^6.6.2",
+    "nodemon": "^2.0.12"
+  }
+}

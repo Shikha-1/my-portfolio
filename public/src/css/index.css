@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  min-width: 100wh;
+  background-image: linear-gradient(to bottom right, #476072, #548ca8, #eeeeee);
+}
+header .carousel-inner .item {
+  height: 100vh;
+}
+.navbar-inverse,
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+.nav.navbar-nav.navbar-right {
+  margin: 25px 0;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+  font-size: large;
+  text-transform: uppercase;
+}
+.banner {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+.carousel-caption {
+  padding-bottom: 250px;
+  font-family: poppins;
+}
+.carousel-caption h2,
+.heading {
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.carousel-caption h2 span {
+  color: #edbb00;
+}
+.carousel-caption a {
+  background: #edbb00;
+  padding: 15px 35px;
+  display: inline-block;
+  margin-top: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 25px;
+}
+.carousel-caption h3 {
+  font-size: 35px;
+}
+.carousel-control.right {
+  background-image: none;
+}
+.carousel-control.left {
+  background-image: none;
+}
+.carousel-indicators .active {
+  background-color: #edbb00;
+  border-color: #edbb00;
+}
+.heading {
+  font-size: 45px;
+}
+.contact,
+.skills,
+.projects,
+.about {
+  color: #fff;
+}
+.footer {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1vh;
+  text-align: center;
+  text-decoration: none;
+}
+.icon-box {
+  color: #fff;
+  padding: 5px;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #125d98;
+  margin: 0 20px;
+}
+
+form,
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 50px;
+}
+form {
+  padding: 5px;
+  margin: 10rem;
+  border: 1px dashed #fff;
+  border-radius: 5px;
+}
+form > input,
+form > textarea {
+  padding: 4px;
+  font-weight: bold;
+  color: #000;
+}
+button {
+  font-weight: bold;
+  text-transform: capitalize;
+  background-color: #125d98;
+  color: #fff;
+  text-align: center;
+}
+form > input,
+form > textarea,
+button {
+  outline: none;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  border-bottom: 3px solid #125d98;
+  border-radius: 5rem;
+}
+button:hover,
+form > input:focus,
+form > textarea:focus {
+  transform: translateY(-2px);
+  transition: all 2s linear infinite;
+}
+.project {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+  padding: 20px;
+  margin: 35px;
+  align-items: center;
+}
+.projects,
+.about,
+.skills,
+.contact {
+  text-align: center;
+  height: auto;
+  margin-bottom: 10px;
+  margin-top: 13rem;
+  margin-bottom: 10rem;
+}
+.link1,
+.link2 {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+.link2 {
+  margin-left: 20px;
+}
+.link1:hover,
+.link2:hover {
+  text-decoration: none;
+  color: #edbb00;
+}
+.project > div > p {
+  font-size: 25px;
+  padding: 0 10px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.custom-skills {
+  margin-top: 35px;
+  text-align: center;
+}
+.custom-skills > p {
+  padding: 0 5px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 30px;
+}
+.custom-skills > p > b,
+.project > div > h2,
+.intro > p > span {
+  color: #edbb00;
+}
+.intro > p {
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 10rem;
+}
+
+/*responsive css*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .carousel-caption {
+    padding-bottom: 350px;
+  }
+  .carousel-caption h2 {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .carousel-caption {
+    padding-bottom: 120px;
+  }
+  .carousel-caption h2,
+  .heading {
+    font-size: 35px;
+  }
+  .carousel-caption h3 {
+    font-size: 18px;
+  }
+  .carousel-caption a {
+    padding: 10px 25px;
+  }
+  form {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .project {
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  .intro > p {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .orderOne {
+    order: 1;
+  }
+  .orderTwo {
+    order: 2;
+  }
+  .link2 {
+    margin-left: 10px;
+  }
+}

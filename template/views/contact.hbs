@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{>headerlinks}}
+<body>
+    {{>navbar}}
+    <div class="contact">
+        <h1 class="heading animated slideInDown" style="animation-delay: 1s">
+            <center>
+                <u>
+                    Contact Me
+                </u>  
+            </center>
+        </h1>
+        <div class="animated fadeInUp" style="animation-delay: 1s">
+            <form id="contactForm">
+                <input type="text" placeholder="Name" id="name"required/>
+                <input type="email" placeholder="Email" id="email" required/>
+                <input type="text" placeholder="Subject" id="sub" />
+                <textarea type="text" placeholder="Message" id="comment" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    {{>footer}}
+
+    <script>
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const sub = document.getElementById("sub");
+        const comment = document.getElementById("comment");
+        const contactForm = document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", e => {
+            e.preventDefault();
+
+            let formData = {
+                name: name.value,
+                email: email.value,
+                sub: sub.value || "",
+                comment: comment.value,
+            }
+
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', '/contact')
+            xhr.setRequestHeader('content-type', 'application/json');
+            xhr.onload = function () {
+                if(xhr.responseText == 'success'){
+                    alert("Message Sent Successfully!")
+                    name.value = '',
+                    sub.value = '',
+                    email.value = '',
+                    comment.value = ''
+                }else{
+                    alert("Something Went Wrong!")
+                }
+            }
+            xhr.send(JSON.stringify(formData));
+        })
+    </script>
+    {{>footerlinks}}
+    
+</body>
+</html>
