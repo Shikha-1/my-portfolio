@@ -51,11 +51,6 @@ async function sendMail(req) {
       },
     });
 
-    // console.log(ACCESSTOKEN);
-    // console.log(CLIENTID);
-    // console.log(CLIENTSECRET);
-    // console.log(REFRESHTOKEN);
-
     const mailOptions = {
       from: req.body.email,
       to: process.env.EMAIL,
@@ -73,7 +68,7 @@ async function sendMail(req) {
 app.post("/contact", (req, res) => {
   sendMail(req, res)
     .then(async (result) => {
-      const response = await result;
+      const response = await result.response;
       console.log("Result : ", response);
       res.send("success");
     })
